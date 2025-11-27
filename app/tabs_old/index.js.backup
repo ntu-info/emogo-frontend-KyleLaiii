@@ -1,0 +1,120 @@
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import LikertScale from '../../components/LikertScale';
+
+const SENTIMENT_LABELS = {
+  1: '非常差',
+  2: '較差',
+  3: '一般',
+  4: '較好',
+  5: '非常好',
+};
+
+export default function HomeScreen() {
+  const [selectedSentiment, setSelectedSentiment] = useState(null);
+  const [showRecords, setShowRecords] = useState(false);
+
+  return (
+    <ScrollView style={styles.scrollContainer}>
+      <View style={styles.container}>
+        <Text style={styles.title}>EmoGo - 測試版本</Text>
+        
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>應用程式狀態：正常</Text>
+          <Text style={styles.info}>基礎功能已啟動</Text>
+        </View>
+
+        {/* Sentiment Questionnaire */}
+        <View style={styles.section}>
+          <LikertScale
+            onSentimentChange={setSelectedSentiment}
+            selectedSentiment={selectedSentiment}
+          />
+          {selectedSentiment && (
+            <View style={styles.selectedBadge}>
+              <Text style={styles.selectedText}>
+                已選擇：{SENTIMENT_LABELS[selectedSentiment]}
+              </Text>
+            </View>
+          )}
+        </View>
+
+        {/* Buttons */}
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>視頻錄製（開發中）</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>輸出紀錄（開發中）</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>查看過往紀錄</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  scrollContainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  container: {
+    padding: 16,
+    paddingBottom: 100,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+    color: '#333',
+    textAlign: 'center',
+  },
+  section: {
+    marginBottom: 20,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 8,
+    color: '#333',
+  },
+  info: {
+    fontSize: 14,
+    color: '#666',
+  },
+  selectedBadge: {
+    backgroundColor: '#e3f2fd',
+    padding: 8,
+    marginTop: 12,
+    borderRadius: 4,
+  },
+  selectedText: {
+    color: '#1565c0',
+    fontSize: 13,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: '#4D96FF',
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 12,
+    opacity: 0.6,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+});

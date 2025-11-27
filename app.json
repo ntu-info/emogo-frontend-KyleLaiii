@@ -2,25 +2,61 @@
   "expo": {
     "scheme": "acme",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-sqlite",
+      "expo-video",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow EmoGo to access your camera",
+          "microphonePermission": "Allow EmoGo to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
     ],
-    "name": "expo-router-mwe",
-    "slug": "expo-router-mwe",
+    "name": "EmoGo",
+    "slug": "emogo-frontend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "userInterfaceStyle": "light",
     "android": {
-      "package": "com.spiketren.exporoutermwe"
+      "package": "com.emogo.app",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.emogo.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "This app needs camera access to record videos",
+        "NSMicrophoneUsageDescription": "This app needs microphone access to record audio in videos",
+        "NSLocationWhenInUseUsageDescription": "This app needs location access to record GPS coordinates",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs location access to record GPS coordinates"
+      }
     },
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "7918e76f-59e9-45c4-aae4-c99cec64cfac"
+        "projectId": "4621c678-9df7-44a5-bfe6-02b2b9ecf932"
       }
     },
-    "owner": "spiketren",
-    "ios": {
-      "bundleIdentifier": "com.spiketren.exporoutermwe",
-      "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
-      }
-    }
+    "owner": "kylelai"
   }
 }

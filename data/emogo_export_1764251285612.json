@@ -1,0 +1,69 @@
+{
+  "exportDate": "2025-11-27T13:48:05.599Z",
+  "recordCount": 7,
+  "records": [
+    {
+      "id": 7,
+      "sentiment": "較好",
+      "sentimentValue": 4,
+      "latitude": 25.01550096033449,
+      "longitude": 121.52929587923619,
+      "timestamp": "2025-11-27T13:44:39.231Z",
+      "videoPath": "file:///var/mobile/Containers/Data/Application/F4664ED9-9654-476B-A5FE-E9A113BF7F9E/Documents/ExponentExperienceData/@kylelai/emogo-frontend/data/video_1764251069203.mp4"
+    },
+    {
+      "id": 6,
+      "sentiment": "較差",
+      "sentimentValue": 2,
+      "latitude": 25.018990501537225,
+      "longitude": 121.53636330146826,
+      "timestamp": "2025-11-27T09:48:46.699Z",
+      "videoPath": "file:///var/mobile/Containers/Data/Application/F4664ED9-9654-476B-A5FE-E9A113BF7F9E/Documents/ExponentExperienceData/@kylelai/emogo-frontend/data/video_1764236916672.mp4"
+    },
+    {
+      "id": 5,
+      "sentiment": "非常好",
+      "sentimentValue": 5,
+      "latitude": 25.018982522984786,
+      "longitude": 121.53637567040293,
+      "timestamp": "2025-11-27T05:29:37.736Z",
+      "videoPath": "file:///var/mobile/Containers/Data/Application/F4664ED9-9654-476B-A5FE-E9A113BF7F9E/Documents/ExponentExperienceData/@kylelai/emogo-frontend/data/video_1764221367716.mp4"
+    },
+    {
+      "id": 4,
+      "sentiment": "較好",
+      "sentimentValue": 4,
+      "latitude": 25.01897155869405,
+      "longitude": 121.53637522072397,
+      "timestamp": "2025-11-27T05:28:46.568Z",
+      "videoPath": "file:///var/mobile/Containers/Data/Application/F4664ED9-9654-476B-A5FE-E9A113BF7F9E/Documents/ExponentExperienceData/@kylelai/emogo-frontend/data/video_1764221316537.mp4"
+    },
+    {
+      "id": 3,
+      "sentiment": "非常好",
+      "sentimentValue": 5,
+      "latitude": 25.01898900315495,
+      "longitude": 121.53637570540427,
+      "timestamp": "2025-11-27T04:17:13.214Z",
+      "videoPath": "file:///var/mobile/Containers/Data/Application/F4664ED9-9654-476B-A5FE-E9A113BF7F9E/Documents/ExponentExperienceData/@kylelai/emogo-frontend/data/video_1764217023183.mp4"
+    },
+    {
+      "id": 2,
+      "sentiment": "較好",
+      "sentimentValue": 4,
+      "latitude": 25.015503885118694,
+      "longitude": 121.52931616684805,
+      "timestamp": "2025-11-27T01:00:09.345Z",
+      "videoPath": "file:///var/mobile/Containers/Data/Application/F4664ED9-9654-476B-A5FE-E9A113BF7F9E/Documents/ExponentExperienceData/@kylelai/emogo-frontend/data/video_1764205199313.mp4"
+    },
+    {
+      "id": 1,
+      "sentiment": "較好",
+      "sentimentValue": 4,
+      "latitude": 25.01554456637055,
+      "longitude": 121.52938608419078,
+      "timestamp": "2025-11-26T21:17:03.830Z",
+      "videoPath": "file:///var/mobile/Containers/Data/Application/F4664ED9-9654-476B-A5FE-E9A113BF7F9E/Documents/ExponentExperienceData/@kylelai/emogo-frontend/data/video_1764191810845.mp4"
+    }
+  ]
+}

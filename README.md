@@ -26,3 +26,5 @@ This is a very small Expo project using **expo-router** with:
    ```
 
 3. Open the app on a device or emulator using the Expo dev tools.
+
+app URI：https://expo.dev/accounts/kylelai/projects/emogo-frontend/builds/7a7e6435-7b0f-4a87-b1bd-708db7194262
