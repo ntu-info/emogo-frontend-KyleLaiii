@@ -11,7 +11,7 @@ export default function VideoRecorder({ onVideoSaved, onError }) {
   const [micPermission, requestMicPermission] = useMicrophonePermissions();
   const [isRecording, setIsRecording] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
-  const [facing, setFacing] = useState('front');
+  const [facing, setFacing] = useState('back');
   const [isSaving, setIsSaving] = useState(false);
   const [isCameraReady, setIsCameraReady] = useState(false);
   const recordingStartTimeRef = useRef(null);
@@ -42,10 +42,11 @@ export default function VideoRecorder({ onVideoSaved, onError }) {
 
   useEffect(() => {
     if (isRecording) {
-      recordingStartTimeRef.current = Date.now();
+      // 這裡不要再重設起始時間
       timerIntervalRef.current = setInterval(() => {
+        if (!recordingStartTimeRef.current) return;
         const elapsed = Date.now() - recordingStartTimeRef.current;
-        setRecordingTime(Math.floor(elapsed / 100) / 10); // Update every 100ms
+        setRecordingTime(Math.floor(elapsed / 100) / 10);
       }, 100);
     } else {
       if (timerIntervalRef.current) {
@@ -188,7 +189,8 @@ export default function VideoRecorder({ onVideoSaved, onError }) {
         ref={cameraRef}
         style={styles.camera}
         facing={facing}
-        mode="video"          // ★ 一直維持在 video 模式
+        mode="video"
+        videoQuality="1080p"     // ★★★★★ 關鍵修正
         onCameraReady={handleCameraReady}
       />
       

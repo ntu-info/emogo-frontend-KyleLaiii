@@ -12,7 +12,8 @@
           "microphonePermission": "Allow EmoGo to access your microphone",
           "recordAudioAndroid": true
         }
-      ]
+      ],
+      "expo-notifications"
     ],
     "name": "EmoGo",
     "slug": "emogo-frontend",
@@ -48,7 +49,8 @@
         "NSCameraUsageDescription": "This app needs camera access to record videos",
         "NSMicrophoneUsageDescription": "This app needs microphone access to record audio in videos",
         "NSLocationWhenInUseUsageDescription": "This app needs location access to record GPS coordinates",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs location access to record GPS coordinates"
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs location access to record GPS coordinates",
+        "NSUserNotificationUsageDescription": "EmoGo 會在固定時間提醒你記錄情緒與影片"
       }
     },
     "extra": {
